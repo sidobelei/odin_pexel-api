@@ -1,0 +1,41 @@
+<style>
+    .collection-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        width: 75%;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caption {
+        font-size: 15px;
+        width: 195px;
+    }
+</style>
+
+<h1>Pexel API - Photo Gallery</h1>
+
+<%= form_with url: "/", method: :get do |form|  %>
+    <%= form.label :collection_id, "Pexel Collection ID" %><br>
+    <%= form.select :collection_id, @collection_ids, include_blank: true %>
+
+    <%= form.submit "Submit"%>
+<% end %>
+
+<a href="https://www.pexels.com">Photos provided by Pexels</a>
+
+<div class="collection-container">
+    <% if @pictures %>
+        <% @pictures.each do |picture| %>
+            <div class="image-container">
+                <%= image_tag(picture.src["small"], width:"195", height:"130") %>
+                <div class="caption">This <a href=<%= picture.url %>>Photo</a> was taken by <a href=<%= picture.user.url %>><%= picture.user.name %></a> on Pexels.</div>
+            </div>
+        <% end %>
+    <% end %>
+</div>
