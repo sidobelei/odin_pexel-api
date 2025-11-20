@@ -49,6 +49,12 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Pexels API
+  gem "pexels", "= 0.5.0"
+
+  # Figaro gem
+  gem "figaro", "= 1.3.0"
 end
 
 group :development do
