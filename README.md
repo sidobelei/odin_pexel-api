@@ -1,24 +1,7 @@
-# README
+# pexel-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The goal of this project was to create a static webpage that displays a personal collection of pictures from Pexel.
 
-Things you may want to cover:
+The purpose of this project was to practice using an external API.
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
